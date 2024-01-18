@@ -1,0 +1,29 @@
+Mục tiêu:
+cài đặt binsearch với danh sách liên kết có sắp xếp
+cài đặt binsearch với thành phần data của DSLK có key là số nguyên (grade)
+cài đặt binsearch với thành phần data của DSLK có key là chuỗi (name)
+Xây dựng ứng dụng quản lí danh sách liên kết có sắp xếp như ở bài trước. Mỗi phần tử có kiểu student_t như 
+dưới đây. Hãy viết 2 chương trình:
+Chương trình 1.
+  a. Tạo một danh sách liên kết có thứ tự theo grade từ lớn đến nhỏ.
+  b. Sử dụng tìm kiếm nhị phân, hãy viết hàm trả về con trỏ đến student tìm thấy, NULL nếu không tìm thấy có 
+prototype như sau (key là grade):
+     student_t* binarySearchByGrade(root_t lst, const int key);
+  c. Viết chương trình chính thử nghiệm các hàm
+Chương trình 2.
+  a. Tạo danh sách liên kết có thứ tự theo name từ nhỏ đến lớn (theo alphabet)
+  b. Sử dụng tìm kiếm nhị phân, hãy viết hàm trả về con trỏ đến student tìm thấy, NULL nếu không tìm thấy có 
+prototype như sau (key là name)
+      student_t* binarySearchByName(root_t lst, char* key);
+  c. Viết chương trình chính thử nghiệm các hàm trên.
+ 
+typedef struct {
+  char id[20];
+  char name[32];
+  int grade;
+} student_t;
+
+Chương trình chính để test có dạng tương tự như hình dưới đây. Chú ý cần sửa danh sách khởi tạo để đảm bảo 
+DSLK được sắp xếp đúng thứ tự như yêu cầu của mỗi chương trình trước khi chạy binSearch. Sinh viên cũng có
+thể cài đặt hàm llInsertSinhvien để đảm bảo DSLK luôn được sắp xếp đúng thứ tự mong muốn khi thêm phần tử 
+mới vào danh sách.
